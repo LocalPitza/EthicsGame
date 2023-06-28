@@ -118,8 +118,10 @@ public class FirstPersonController : MonoBehaviour
             {
                 MovementInput();
             }
-
+            
+            // Should stop ability to move player head when in dialogue
             MouseLook();
+            //
 
             ApplyMovement();
 
