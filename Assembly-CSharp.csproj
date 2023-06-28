@@ -56,12 +56,10 @@
     <Analyzer Include="F:\Microsoft Visual Studio\IDE\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\GameEvent.cs" />
     <Compile Include="Assets\Shaders\ShaderHandler.cs" />
     <Compile Include="Assets\Scripts\ImageRotate.cs" />
     <Compile Include="Assets\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Scripts\Interactable.cs" />
-    <Compile Include="Assets\Scripts\GameEventListener.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Shaders\Pixelation.shader" />
