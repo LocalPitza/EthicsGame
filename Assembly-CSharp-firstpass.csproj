@@ -245,6 +245,7 @@
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Options\Timeline\Playables\Conversation\StartConversationBehaviour.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Triggers\Interaction\Usable.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\UI\Abstract\Dialogue\AbstractDialogueUIControls.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\Demo\DieOnTakeDamage.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\MVC\View\TextlessBarkUI.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Triggers\Triggers\OnEvent\SetAnimatorStateOnDialogueEvent.cs" />
@@ -328,8 +329,10 @@
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\MVC\Model\Data\Variable.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\UI\Legacy\GUI Controls\GUILabel.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\LuaLibrary\TableLib.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Common\Scripts\UnityEvents\CollisionEvent.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\UI\Standard\Quest\Common\StandardUIFoldoutTemplate.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\UI\Standard\Dialogue\BringSubtitlePanelToFrontOnFocus.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Common\Templates\SaverTemplate.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Triggers\Triggers\Condition.cs" />
@@ -354,6 +357,7 @@
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\UI\Standard\Selector\StandardUISelectorElements.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\UI\Unity UI\Dialogue\OverrideUnityUIDialogueControls.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Common\Wrappers\Misc\LODManager.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\Deprecated\Triggers\BarkTrigger.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\MVC\Actor\Override\OverrideDialogueUI.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\UI\Legacy\GUI Controls\Effects\FlashEffect.cs" />
@@ -739,6 +743,7 @@
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Options\Timeline\Playables\Bark\BarkBehaviour.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Syntax\Statement.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Demo\Scenes\New Input System\DemoInputRegistration.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\UI\Unity UI\Effects\UnityUIContinueButtonFastForward.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Save System\DialogueSystemSaver.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Importers\Yarn2\YarnEnumDomain.cs" />
@@ -752,6 +757,7 @@
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\LuaValue\LuaString.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\LuaLibrary\MathLib.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Options\Timeline\Playables\ShowAlert\ShowAlertClip.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Triggers\Triggers\OnEvent\SetEnabledOnDialogueEvent.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\UI\Legacy\GUI Controls\ScaledRect\ScaledRect.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Syntax\RepeatStmt.cs" />
@@ -776,6 +782,7 @@
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Syntax\WhileStmt.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Importers\Arcweave\ArcweaveImporter.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Importers\Yarn2\YarnCustomCommands.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Common\Wrappers\Save System\Savers\ActiveSaver.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\UI\Unity UI\Quest\UnityUIQuestGroupTemplate.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Common\Scripts\Misc\CoroutineUtility.cs" />
@@ -819,6 +826,7 @@
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Options\Timeline\Playables\Conversation\ConversationMixerBehaviour.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Triggers\Triggers\OnEvent\SetQuestStateOnDialogueEvent.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Utility\LuaWatchItem.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\MVC\Model\Data\Utility\LinkUtility.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Utility\Toggle.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\MVC\Model\Data\EmphasisSetting.cs" />
@@ -863,14 +871,6 @@
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Utility\ConversationLogger.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\MVC\Model\Data\Utility\Template.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\UI\Unity UI\Dialogue\UnityUIDialogueControls.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
      <Folder Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Importers\Aurora" />
      <Folder Include="Assets\Plugins\Pixel Crushers\Dialogue System\Prefabs\Standard UI Prefabs\Pro\Circle" />
      <Folder Include="Assets\Plugins\Unity_PostEffect-master\Assets\PostEffects\InstaColor" />
@@ -1460,14 +1460,14 @@
      <Reference Include="UnityEditor.UnityConnectModule">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\Managed\UnityEngine\UnityEditor.UnityConnectModule.dll</HintPath>
      </Reference>
+     <Reference Include="DOTween">
+     <HintPath>D:\Neytism\Game Projects\EthicsGame\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>D:\Neytism\Game Projects\EthicsGame\Library\PackageCache\com.unity.visualscripting@1.8.0\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="ReportGeneratorMerged">
      <HintPath>D:\Neytism\Game Projects\EthicsGame\Library\PackageCache\com.unity.testtools.codecoverage@1.2.2\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
-     </Reference>
-     <Reference Include="DOTween">
-     <HintPath>D:\Neytism\Game Projects\EthicsGame\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>

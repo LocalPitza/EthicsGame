@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractTest : Interactable
 {
-
+    [SerializeField] private string _text = "";
     public override void OnInteract()
     {
         
@@ -13,7 +13,7 @@ public class InteractTest : Interactable
     public override void OnFocus()
     {
         outline.OutlineWidth = 10;
-        UIInteract.Instance.ShowText("Magazines");
+        UIInteract.Instance.ShowText(_text);
     }
 
     public override void OnLoseFocus()

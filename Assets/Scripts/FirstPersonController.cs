@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
 {
-
-
-
+    
     public bool CanMove { get; set; } = true;
     private bool IsSprinting => canSprint && Input.GetKey(sprintKey);
     private bool ShouldJump => Input.GetKeyDown(jumpKey) && CharacCtrl.isGrounded;
@@ -14,6 +12,7 @@ public class FirstPersonController : MonoBehaviour
 
     [Header("Function Options")]
     [SerializeField] private bool canMove = true;
+    [SerializeField] private bool canLook = true;
     [SerializeField] private bool canSprint = true;
     [SerializeField] private bool canJump = true;
     [SerializeField] private bool canCrouch = true;
@@ -99,6 +98,8 @@ public class FirstPersonController : MonoBehaviour
 
     public static FirstPersonController instance;
 
+    private bool isOnDialogue = false;
+
     void Awake()
     {
         instance = this;
@@ -112,14 +113,17 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
-        if (CanMove)
+        if (CanMove) // i added isOnDialogue, i think CanMove is necessary 
         {
+            if (isOnDialogue) return;
+            
             if (canMove)
             {
                 MovementInput();
             }
             
             // Should stop ability to move player head when in dialogue
+            CursorHandler();
             MouseLook();
             //
 
@@ -151,6 +155,20 @@ public class FirstPersonController : MonoBehaviour
 
     // ***** PLAYER MOVEMENT *****
 
+    public void IsOnDialogue(bool isOnDialogue)
+    {
+        if (isOnDialogue)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            this.isOnDialogue = true;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            this.isOnDialogue = false;
+        }
+    }
+    
     private void MovementInput()
     {
         CurrentInput = new Vector2((isCrouching ? crouchSpeed : IsSprinting ? SprintSpeed : WalkSpeed) * Input.GetAxis("Vertical"), (isCrouching ? crouchSpeed : IsSprinting ? SprintSpeed : WalkSpeed) * Input.GetAxis("Horizontal"));
@@ -159,15 +177,31 @@ public class FirstPersonController : MonoBehaviour
         MoveDir = (transform.TransformDirection(Vector3.forward) * CurrentInput.x) + (transform.TransformDirection(Vector3.right) * CurrentInput.y);
         MoveDir.y = moveDirectionY;
     }
+    
 
     // ***** PLAYER LOOK *****
 
     private void MouseLook()
     {
+        if (!canLook) return;
         rotationX -= Input.GetAxis("Mouse Y") * LookSpeedY;
         rotationX = Mathf.Clamp(rotationX, -UpperLookLimit, LowerLookLimit);
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * LookSpeedX, 0);
+    }
+
+    private void CursorHandler()
+    {
+        if (Input.GetKey(KeyCode.LeftAlt))
+        {
+            canLook = false;
+            Cursor.lockState = CursorLockMode.None;
+        }
+        else
+        {
+            canLook = true;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     // ***** Jumping *****
