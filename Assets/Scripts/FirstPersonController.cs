@@ -87,6 +87,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float interactionDistance = default;
     [SerializeField] private LayerMask interactionLayer = default;
     private Interactable currentInteractable;
+    private Interactable previousInteractable;
 
     private Camera playerCamera;
     private CharacterController CharacCtrl;
@@ -113,7 +114,7 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
-        if (CanMove) // i added isOnDialogue, i think CanMove is necessary 
+        if (CanMove) // i added isOnDialogue, i dont think CanMove is necessary 
         {
             if (isOnDialogue) return;
             
@@ -296,6 +297,10 @@ public class FirstPersonController : MonoBehaviour
 
     private void HandleInteractionCheck()
     {
+        //modified this kasi minsan nagdodouble yung naka Onfocus
+        
+        previousInteractable = currentInteractable;
+        
         if(Physics.Raycast(playerCamera.ViewportPointToRay(interactionRayPoint),out RaycastHit hit, interactionDistance))
         {
             if(hit.collider.gameObject.layer == 6 && (currentInteractable == null || hit.collider.gameObject.GetInstanceID() != currentInteractable.GetInstanceID()))
@@ -306,10 +311,17 @@ public class FirstPersonController : MonoBehaviour
                     currentInteractable.OnFocus();
             }
         }
-        else if (currentInteractable)
+        else
         {
-            currentInteractable.OnLoseFocus();
             currentInteractable = null;
+        }
+        
+        if (previousInteractable != currentInteractable)
+        {
+            if (previousInteractable != null)
+            {
+                previousInteractable.OnLoseFocus();
+            }
         }
     }
 

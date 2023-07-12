@@ -1,24 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PixelCrushers.DialogueSystem;
 
 public class InteractTest : Interactable
 {
     [SerializeField] private string _text = "";
     public override void OnInteract()
     {
-        
+        DialogueManager.StartConversation(GetComponent<DialogueSystemTrigger>().conversation);
+        UIInteract.Instance.HideText();
     }
 
     public override void OnFocus()
     {
-        outline.OutlineWidth = 10;
+        if (hasOutline)
+        {
+            outline.OutlineWidth = 10;
+        }
+        
         UIInteract.Instance.ShowText(_text);
     }
 
     public override void OnLoseFocus()
     {
-        outline.OutlineWidth = 0;
+        if (hasOutline)
+        {
+            outline.OutlineWidth = 0;
+        }
+       
         UIInteract.Instance.HideText();
     }
 }
