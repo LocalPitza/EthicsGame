@@ -5,7 +5,6 @@ using UnityEngine;
 public class FirstPersonController : MonoBehaviour
 {
     
-    public bool CanMove { get; set; } = true;
     private bool IsSprinting => canSprint && Input.GetKey(sprintKey);
     private bool ShouldJump => Input.GetKeyDown(jumpKey) && CharacCtrl.isGrounded;
     private bool ShouldCrouch => Input.GetKeyDown(crouchKey) && !inCrouchAnim && CharacCtrl.isGrounded;
@@ -114,43 +113,39 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
-        if (CanMove) 
+        if (isOnDialogue) return;
+            
+        if (canMove)
         {
-            if (isOnDialogue) return;
+            MovementInput();
+        }
             
-            if (canMove)
-            {
-                MovementInput();
-            }
-            
-            // Should stop ability to move player head when in dialogue
-            CursorHandler();
-            MouseLook();
-            //
+        // Should stop ability to move player head when in dialogue
+        CursorHandler();
+        MouseLook();
+        //
 
-            ApplyMovement();
+        ApplyMovement();
 
-            if (canJump)
-                HandleJump();
+        if (canJump)
+            HandleJump();
 
-            if (canCrouch)
-                HandleCrouch();
+        if (canCrouch)
+            HandleCrouch();
 
-            if (canHeadBob)
-                HandleHeadBob();
+        if (canHeadBob)
+            HandleHeadBob();
 
-            if (useFootsteps)
-                HandleFootstep();
+        if (useFootsteps)
+            HandleFootstep();
 
-            if (useStamina)
-                HandleStamina();
+        if (useStamina)
+            HandleStamina();
 
-            if (canInteract)
-            {
-                HandleInteractionCheck();
-                HandleInteractionInput();
-            }
-
+        if (canInteract)
+        {
+            HandleInteractionCheck();
+            HandleInteractionInput();
         }
     }
 
@@ -177,6 +172,12 @@ public class FirstPersonController : MonoBehaviour
         float moveDirectionY = MoveDir.y;
         MoveDir = (transform.TransformDirection(Vector3.forward) * CurrentInput.x) + (transform.TransformDirection(Vector3.right) * CurrentInput.y);
         MoveDir.y = moveDirectionY;
+    }
+    
+    public bool CanMove
+    {
+        get => canMove;
+        set => canMove = value;
     }
     
 

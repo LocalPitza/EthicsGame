@@ -1382,8 +1382,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 622.04865
-        y: 184.36894
+        x: 609.55206
+        y: 147.61194
         width: 160
         height: 30
     - id: 2
@@ -1438,8 +1438,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 621.04865
-        y: 255.36893
+        x: 609.55206
+        y: 197.61194
         width: 160
         height: 30
     - id: 3
@@ -1493,8 +1493,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 623.04865
-        y: 334.36893
+        x: 609.55206
+        y: 247.61194
         width: 160
         height: 30
     - id: 4
@@ -1549,8 +1549,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 624.04865
-        y: 419.36893
+        x: 609.55206
+        y: 297.61194
         width: 160
         height: 30
     - id: 5
@@ -1604,8 +1604,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 626.04865
-        y: 488.36893
+        x: 609.55206
+        y: 347.61194
         width: 160
         height: 30
     - id: 6
@@ -1660,8 +1660,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 529.016
-        y: 648.4354
+        x: 519.55206
+        y: 447.61194
         width: 160
         height: 30
     - id: 7
@@ -1715,8 +1715,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 787.04816
-        y: 687.60547
+        x: 699.55206
+        y: 447.61194
         width: 160
         height: 30
     - id: 8
@@ -1771,8 +1771,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 525.8245
-        y: 730.031
+        x: 519.55206
+        y: 497.61194
         width: 160
         height: 30
     - id: 9
@@ -1828,8 +1828,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 649.4238
-        y: 821.1941
+        x: 609.55206
+        y: 547.61194
         width: 160
         height: 30
     - id: 10
@@ -1877,8 +1877,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 130.69902
-        y: 177.90291
+        x: 296.3706
+        y: 145.06712
         width: 160
         height: 30
     - id: 11
@@ -1938,8 +1938,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1061.767
-        y: 189.55334
+        x: 924.47723
+        y: 143.13428
         width: 160
         height: 30
     - id: 12
@@ -1993,8 +1993,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 970.50476
-        y: 333.7281
+        x: 834.4773
+        y: 193.13428
         width: 160
         height: 30
     - id: 13
@@ -2048,8 +2048,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1193.806
-        y: 336.64072
+        x: 1014.4772
+        y: 193.13428
         width: 160
         height: 30
     - id: 14
@@ -2097,8 +2097,8 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1072.4464
-        y: 415.767
+        x: 924.47723
+        y: 243.13428
         width: 160
         height: 30
     - id: 15
@@ -2159,13 +2159,13 @@ MonoBehaviour:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 631.108
-        y: 576.0033
+        x: 609.55206
+        y: 397.61194
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 128.8953, y: 0}
-    canvasZoom: 1.3299997
+    canvasScrollPosition: {x: 282.89456, y: 45.64283}
+    canvasZoom: 1.2699997
   - id: 4
     fields:
     - title: Title
@@ -3806,13 +3806,16 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: 'TeleportToInterrogationRoom();
+
+        Variable["DetectiveStartingIndex"]
+        = 2'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 1262.7628
+        x: 1262.1005
         y: 232.06781
         width: 160
         height: 30
@@ -3976,8 +3979,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 38.392883}
-    canvasZoom: 1.1199999
+    canvasScrollPosition: {x: 428.7821, y: 5.4711246}
+    canvasZoom: 1.1799998
   - id: 5
     fields:
     - title: Title

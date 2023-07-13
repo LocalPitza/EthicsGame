@@ -16,12 +16,14 @@ public class Events : MonoBehaviour
     private void OnEnable()
     {
         Lua.RegisterFunction("TeleportToApartment", this, SymbolExtensions.GetMethodInfo(() => TeleportToApartment()));
+        Lua.RegisterFunction("TeleportToInterrogationRoom", this, SymbolExtensions.GetMethodInfo(() => TeleportToInterrogationRoom()));
         Lua.RegisterFunction("TakeCurrentObject", this, SymbolExtensions.GetMethodInfo(() => TakeCurrentObject()));
     }
 
     private void OnDisable()
     {
         Lua.UnregisterFunction("TeleportToApartment");
+        Lua.UnregisterFunction("TeleportToInterrogationRoom");
         Lua.UnregisterFunction("TakeCurrentObject");
     }
 
@@ -39,19 +41,12 @@ public class Events : MonoBehaviour
 
     public void TeleportToInterrogationRoom()
     {
-        FirstPersonController.instance.CanMove = false;
-        
         _blackScreen.DOFade(1f, 2f).onComplete = () =>
         {
-            transform.position = _interrogationRoomSpawnPoint.position;
+            transform.DOMove(_interrogationRoomSpawnPoint.position, 0f);
             transform.rotation = _interrogationRoomSpawnPoint.rotation;
             
-            _blackScreen.DOFade(1f, 2f).onComplete = () =>
-            {
-                _blackScreen.DOFade(0f, 3f);
-                FirstPersonController.instance.CanMove = true;
-            };
-
+            _blackScreen.DOFade(0f, 3f);
         };
     }
 
