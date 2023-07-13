@@ -86,7 +86,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private Vector3 interactionRayPoint = default;
     [SerializeField] private float interactionDistance = default;
     [SerializeField] private LayerMask interactionLayer = default;
-    private Interactable currentInteractable;
+    public Interactable currentInteractable;
     private Interactable previousInteractable;
 
     private Camera playerCamera;
@@ -114,7 +114,7 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
-        if (CanMove) // i added isOnDialogue, i dont think CanMove is necessary 
+        if (CanMove) 
         {
             if (isOnDialogue) return;
             

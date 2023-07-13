@@ -1,36 +1,38 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using DG.Tweening;
+using UnityEngine;
 
-public class InteractDoor : Interactable
+public class InteractDrawer : Interactable
 {
     private bool _isOpen = false;
-    private string _text = "Open Door";
-    private BoxCollider _collider;
+    private string _text = "Open Drawer";
+    private Renderer _objRenderer;
+    private Color originalColor;
+    [SerializeField] private Vector3 _openedPosition;
 
     private void Start()
     {
-        _collider = GetComponent<BoxCollider>();
+        _objRenderer = GetComponent<Renderer>();
+        originalColor = _objRenderer.material.color;
     }
 
     public override void OnInteract()
     {
         if (!_isOpen)
         {
-            _collider.enabled = false;
-            transform.DORotate(new Vector3(0, 90, 0), 0.75f).onComplete = () => {  _collider.enabled = true;};
+            transform.DOLocalMove(_openedPosition, 0.75f);
+            
                 
             _isOpen = true;
-            _text = "Close Door";
+            _text = "Close Drawer";
         }
         else
         {
-            _collider.enabled = false;
-            transform.DORotate(new Vector3(0, 0, 0), 0.75f).onComplete = () => {  _collider.enabled = true;};
+            transform.DOLocalMove(new Vector3(0, 0, 0), 0.75f);
             _isOpen = false;
-            _text = "Open Door";
+            _text = "Open Drawer";
         }
         
     }
@@ -41,6 +43,8 @@ public class InteractDoor : Interactable
         {
             outline.OutlineWidth = 10;
         }
+
+        _objRenderer.material.DOColor((originalColor+ new Color(0.2f,0.2f,0.2f)), 0.2f);
         
         UIInteract.Instance.ShowText(_text);
     }
@@ -51,6 +55,9 @@ public class InteractDoor : Interactable
         {
             outline.OutlineWidth = 0;
         }
+        
+        _objRenderer.material.DOColor(originalColor, 0.2f);
+        
         UIInteract.Instance.HideText();
     }
 }

@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\InteractTest.cs" />
      <Compile Include="Assets\Scripts\Events.cs" />
+     <Compile Include="Assets\Scripts\InteractDrawer.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Prefabs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
