@@ -9,6 +9,9 @@ public class InteractDoor : Interactable
     private bool _isOpen = false;
     private string _text = "Open Door";
     private BoxCollider _collider;
+    [SerializeField] private Vector3 _start;
+    [SerializeField] private Vector3 _end;
+    
 
     private void Start()
     {
@@ -20,7 +23,7 @@ public class InteractDoor : Interactable
         if (!_isOpen)
         {
             _collider.enabled = false;
-            transform.DORotate(new Vector3(0, 90, 0), 0.75f).onComplete = () => {  _collider.enabled = true;};
+            transform.DORotate(_end, 0.75f).onComplete = () => {  _collider.enabled = true;};
                 
             _isOpen = true;
             _text = "Close Door";
@@ -28,7 +31,7 @@ public class InteractDoor : Interactable
         else
         {
             _collider.enabled = false;
-            transform.DORotate(new Vector3(0, 0, 0), 0.75f).onComplete = () => {  _collider.enabled = true;};
+            transform.DORotate(_start, 0.75f).onComplete = () => {  _collider.enabled = true;};
             _isOpen = false;
             _text = "Open Door";
         }

@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: fbb16d50ea6cb72488f623313ff007ba
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 1-_plande_d_1-_plande_d_1.1-_plande_dMat
+    second: {fileID: 2100000, guid: 7a2156d64aefeea419fde56a30f337aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 10-_train_mesh2_train_10-_train_mesh2_train_19.10-_train_mesh2_trMat
+    second: {fileID: 2100000, guid: 63b54a072b5e0fc42bbd88f4ceb50485, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 11-_train_mesh3_train_11-_train_mesh3_train_21.11-_train_mesh3_trMat
+    second: {fileID: 2100000, guid: ef4cab61948e43f41b6d479196a6be04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 2-_cubes_d_2-_cubes_d_3.2-_cubes_dMat
+    second: {fileID: 2100000, guid: defc28d6ea7659d46a53b6514a09983b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 3-_ball_d_3-_ball_d_5.3-_ball_dMat
+    second: {fileID: 2100000, guid: 7631844d14384604aa3f0617f08ddd95, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 4-_cube_B_mesh_cubes__4-_cube_B_mesh_cubes__7.4-_cube_B_mesh_cubeMat
+    second: {fileID: 2100000, guid: ed1f9bb1f4e6a744da69e66b0f3502bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 5-_cube_A_mesh_cubes__5-_cube_A_mesh_cubes__10.5-_cube_A_mesh_cubMat
+    second: {fileID: 2100000, guid: 0b2e190378cbea240ab74c46a59db964, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 5-_cube_A_mesh_cubes__5-_cube_A_mesh_cubes__9.5-_cube_A_mesh_cubeMat
+    second: {fileID: 2100000, guid: 8a5dc41708885354b853e2d2e20c8a21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 6-_cube_C_mesh_cubes__6-_cube_C_mesh_cubes__11.6-_cube_C_mesh_cubMat
+    second: {fileID: 2100000, guid: b7f9615ee9a0f3c4c92dc9b6cf31ff1c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 7-_cube_D_mesh_cubes__7-_cube_D_mesh_cubes__13.7-_cube_D_mesh_cubMat
+    second: {fileID: 2100000, guid: b0ed23e1a35672a40bb20a867578f168, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 8-_horse_d_8-_horse_d_15.8-_horse_dMat
+    second: {fileID: 2100000, guid: 3f6e7c13ed2bf0048a4c18880f3e9114, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 9-_train_d_9-_train_d_17.9-_train_dMat
+    second: {fileID: 2100000, guid: 333f84b9e84b36449b9bf948487dd672, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
