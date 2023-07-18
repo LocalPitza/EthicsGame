@@ -168,9 +168,10 @@ public class FirstPersonController : MonoBehaviour
     private void MovementInput()
     {
         CurrentInput = new Vector2((isCrouching ? crouchSpeed : IsSprinting ? SprintSpeed : WalkSpeed) * Input.GetAxis("Vertical"), (isCrouching ? crouchSpeed : IsSprinting ? SprintSpeed : WalkSpeed) * Input.GetAxis("Horizontal"));
-
+        
         float moveDirectionY = MoveDir.y;
         MoveDir = (transform.TransformDirection(Vector3.forward) * CurrentInput.x) + (transform.TransformDirection(Vector3.right) * CurrentInput.y);
+        MoveDir = MoveDir.normalized * (isCrouching ? crouchSpeed : IsSprinting ? SprintSpeed : WalkSpeed); //normalize
         MoveDir.y = moveDirectionY;
     }
     
@@ -178,6 +179,11 @@ public class FirstPersonController : MonoBehaviour
     {
         get => canMove;
         set => canMove = value;
+    }
+
+    public void ResetMoveDir()
+    {
+        MoveDir = Vector3.zero;
     }
     
 
@@ -214,12 +220,17 @@ public class FirstPersonController : MonoBehaviour
             MoveDir.y = jumpForce;
     }
 
-    // ***** Jumping *****
+    // ***** Crouch *****
 
     private void HandleCrouch()
     {
         if (ShouldCrouch)
             StartCoroutine(CrouchStand());
+    }
+
+    public void ToggleCrouchStand()
+    {
+        StartCoroutine(CrouchStand());
     }
 
     // ***** PLAYER HEADBOB *****

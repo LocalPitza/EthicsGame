@@ -40,20 +40,12 @@ public class InteractDoor : Interactable
 
     public override void OnFocus()
     {
-        if (hasOutline)
-        {
-            outline.OutlineWidth = 10;
-        }
         
         UIInteract.Instance.ShowText(_text);
     }
 
     public override void OnLoseFocus()
     {
-        if (hasOutline)
-        {
-            outline.OutlineWidth = 0;
-        }
         UIInteract.Instance.HideText();
     }
 }

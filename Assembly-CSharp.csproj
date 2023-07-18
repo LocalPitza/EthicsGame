@@ -41,9 +41,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\Shaders\ShaderHandler.cs" />
      <Compile Include="Assets\Scripts\ImageRotate.cs" />
+     <Compile Include="Assets\Scripts\FanSpinAnimation.cs" />
      <Compile Include="Assets\Scripts\InteractDrawer.cs" />
      <Compile Include="Assets\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Scripts\InteractDoor.cs" />
@@ -51,24 +51,23 @@
      <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\InteractTest.cs" />
      <Compile Include="Assets\Scripts\Events.cs" />
-     <Compile Include="Assets\Scripts\FanSpinAnimation.cs" />
+     <Compile Include="Assets\Scripts\ChangeSprite.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Prefabs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-     <Folder Include="Assets\QuickOutline\Resources" />
-     <Folder Include="Assets\QuickOutline\Resources\Materials" />
+     <Folder Include="Assets\Graphics\Models\Interrogation" />
      <Folder Include="Assets\Editor Default Resources" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <Folder Include="Assets\TextMesh Pro\Sprites" />
      <Folder Include="Assets\Graphics\Models\Drawers" />
      <Folder Include="Assets\Graphics\Models\Apartment" />
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
+     <Folder Include="Assets\Graphics\Models\Interrogation\Water" />
      <Folder Include="Assets\Graphics\Models\Doors\door materials" />
      <Folder Include="Assets\Graphics\Models\Electronics" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\Scripts" />
      <Folder Include="Assets\Graphics\Materials\Stylized Wood Textures" />
-     <Folder Include="Assets\QuickOutline" />
      <Folder Include="Assets\Graphics\Models\Chairs" />
      <Folder Include="Assets\Graphics\Materials\Stylized Wood Textures\Materials" />
      <Folder Include="Assets\Prefabs\Objects_Interior(Village)_Demo" />
@@ -80,12 +79,12 @@
      <Folder Include="Assets\ProBuilder Data" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <Folder Include="Assets\TextMesh Pro\Resources" />
-     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <Folder Include="Assets\Graphics\Models\Doors" />
      <Folder Include="Assets\Editor Default Resources\Dialogue System" />
      <Folder Include="Assets\Graphics\Materials\Stylized Wood Textures\Materials\Planks" />
      <Folder Include="Assets\Graphics\Models" />
      <None Include="Assets\Shaders\Pixelation.shader" />
+     <Folder Include="Assets\Graphics\Models\Miscellaneous\toys" />
      <Folder Include="Assets\Graphics\Models\Shelves" />
      <Folder Include="Assets\Prefabs\Objects_Interior(Village)_Demo\Models" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
@@ -111,14 +110,15 @@
      <Folder Include="Assets\Graphics\Materials\Stylized Wood Textures\Textures\Chevron" />
      <Folder Include="Assets\Gizmos" />
      <Folder Include="Assets\Resources" />
+     <Folder Include="Assets\Graphics\Models\Interrogation\chair" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <Folder Include="Assets\TextMesh Pro\Shaders" />
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
-     <Folder Include="Assets\QuickOutline\Resources\Shaders" />
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <Folder Include="Assets\Graphics\Models\Beds" />
      <Folder Include="Assets\Graphics\Colors" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <Folder Include="Assets\Graphics\Models\Miscellaneous\plants" />
      <Folder Include="Assets\Audio\footstep" />
      <Folder Include="Assets\Graphics\Sprites" />
      <Folder Include="Assets\Graphics\Materials" />
@@ -127,12 +127,10 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets\Audio" />
      <Folder Include="Assets\Graphics\Test\Materials" />
-     <Folder Include="Assets\QuickOutline\Scripts" />
      <Folder Include="Assets\Graphics\Materials\Stylized Wood Textures\Textures\Herringbone" />
      <Folder Include="Assets\Prefabs\Objects_Interior(Village)_Demo\Textures" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <Folder Include="Assets\Graphics\Models\Carpets" />
      <Folder Include="Assets\Scenes" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />

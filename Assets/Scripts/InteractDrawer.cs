@@ -39,10 +39,6 @@ public class InteractDrawer : Interactable
 
     public override void OnFocus()
     {
-        if (hasOutline)
-        {
-            outline.OutlineWidth = 10;
-        }
 
         _objRenderer.material.DOColor((originalColor+ new Color(0.2f,0.2f,0.2f)), 0.2f);
         
@@ -51,10 +47,6 @@ public class InteractDrawer : Interactable
 
     public override void OnLoseFocus()
     {
-        if (hasOutline)
-        {
-            outline.OutlineWidth = 0;
-        }
         
         _objRenderer.material.DOColor(originalColor, 0.2f);
         
