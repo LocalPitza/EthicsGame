@@ -16,13 +16,32 @@ public class InteractTest : Interactable
 
     public override void OnFocus()
     {
-        
         UIInteract.Instance.ShowText(_text);
+
+        if (!hasOutline) return;
+        if (outline == null)
+        {
+            Debug.Log($"{gameObject.name} needs outline component");
+        }
+        else
+        {
+            outline.highlighted = true;
+        }
     }
 
     public override void OnLoseFocus()
     {
-        
         UIInteract.Instance.HideText();
+
+        if (!hasOutline) return;
+        if (outline == null)
+        {
+            Debug.Log($"{gameObject.name} needs outline component");
+        }
+        else
+        {
+            outline.highlighted = false;
+        }
+
     }
 }

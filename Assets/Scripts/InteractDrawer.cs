@@ -43,6 +43,15 @@ public class InteractDrawer : Interactable
         _objRenderer.material.DOColor((originalColor+ new Color(0.2f,0.2f,0.2f)), 0.2f);
         
         UIInteract.Instance.ShowText(_text);
+        
+        if (outline == null)
+        {
+            Debug.Log($"{gameObject.name} needs outline component");
+        }
+        else
+        {
+            outline.highlighted = true;
+        }
     }
 
     public override void OnLoseFocus()
@@ -51,5 +60,14 @@ public class InteractDrawer : Interactable
         _objRenderer.material.DOColor(originalColor, 0.2f);
         
         UIInteract.Instance.HideText();
+        
+        if (outline == null)
+        {
+            Debug.Log($"{gameObject.name} needs outline component");
+        }
+        else
+        {
+            outline.highlighted = false;
+        }
     }
 }

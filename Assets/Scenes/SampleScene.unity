@@ -796,6 +796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacf6ecb564af644881a54460a0d0f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _text: Broken phone
 --- !u!114 &30656855
 MonoBehaviour:
@@ -3515,6 +3517,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!23 &164477806
 MeshRenderer:
@@ -5398,6 +5402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!23 &219098142
 MeshRenderer:
@@ -6833,6 +6839,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacf6ecb564af644881a54460a0d0f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _text: Magazine
 --- !u!65 &308969464
 BoxCollider:
@@ -7540,6 +7548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!23 &382421618
 MeshRenderer:
@@ -7983,6 +7993,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0129041b6cb8cdb46979c78501eab3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _start: {x: 0, y: 180, z: 0}
   _end: {x: 0, y: -90, z: 0}
 --- !u!65 &394379344
@@ -8572,6 +8584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacf6ecb564af644881a54460a0d0f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _text: Talk to detective
 --- !u!1 &428096543
 GameObject:
@@ -9182,7 +9196,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27238
+  m_Name: pb_Mesh147920
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9680,6 +9694,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacf6ecb564af644881a54460a0d0f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _text: Suspicious document
 --- !u!212 &512908075
 SpriteRenderer:
@@ -9884,7 +9900,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27294
+  m_Name: pb_Mesh147978
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10992,6 +11008,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0129041b6cb8cdb46979c78501eab3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _start: {x: 0, y: 0, z: 0}
   _end: {x: 0, y: 90, z: 0}
 --- !u!82 &553554191
@@ -11325,6 +11343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!65 &572345796
 BoxCollider:
@@ -14506,6 +14526,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0129041b6cb8cdb46979c78501eab3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _start: {x: 0, y: 180, z: 0}
   _end: {x: 0, y: -90, z: 0}
 --- !u!65 &609167665
@@ -14581,6 +14603,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!23 &623476549
 MeshRenderer:
@@ -14953,6 +14977,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacf6ecb564af644881a54460a0d0f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _text: Talk to wife.
 --- !u!1 &657750029
 GameObject:
@@ -15807,6 +15833,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!65 &695094188
 BoxCollider:
@@ -19484,6 +19512,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0129041b6cb8cdb46979c78501eab3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _start: {x: 0, y: 0, z: 0}
   _end: {x: 0, y: 90, z: 0}
 --- !u!82 &841384522
@@ -21935,6 +21965,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacf6ecb564af644881a54460a0d0f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _text: Leave
 --- !u!65 &944069684
 BoxCollider:
@@ -22484,7 +22516,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0.05}
+  m_LocalPosition: {x: -0.00012206288, y: 2, z: 0.05012513}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22510,7 +22542,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28202
+  m_Name: pb_Mesh148922
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22814,6 +22846,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!1 &970821657
 GameObject:
@@ -22875,6 +22909,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0129041b6cb8cdb46979c78501eab3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _start: {x: 0, y: 0, z: 0}
   _end: {x: 0, y: 90, z: 0}
 --- !u!82 &970821661
@@ -23084,6 +23120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!1001 &976702840
 PrefabInstance:
@@ -24877,6 +24915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!23 &1096436360
 MeshRenderer:
@@ -25409,6 +25449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0129041b6cb8cdb46979c78501eab3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _start: {x: 0, y: 90, z: 0}
   _end: {x: 0, y: 180, z: 0}
 --- !u!82 &1118333026
@@ -26492,6 +26534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!1 &1172992573
 GameObject:
@@ -31675,7 +31719,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh27498
+  m_Name: pb_Mesh148184
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33028,6 +33072,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0129041b6cb8cdb46979c78501eab3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _start: {x: 0, y: 90, z: 0}
   _end: {x: 0, y: 180, z: 0}
 --- !u!82 &1335083503
@@ -37488,6 +37534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0129041b6cb8cdb46979c78501eab3a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _start: {x: 0, y: 90, z: 0}
   _end: {x: 0, y: 0, z: 0}
 --- !u!82 &1683515016
@@ -37926,7 +37974,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28298
+  m_Name: pb_Mesh149026
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -39261,6 +39309,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!1 &1769852986
 GameObject:
@@ -39322,6 +39372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!23 &1769852990
 MeshRenderer:
@@ -40328,6 +40380,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacf6ecb564af644881a54460a0d0f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _text: Radio
 --- !u!23 &1827983837
 MeshRenderer:
@@ -40798,6 +40852,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!1 &1848053084
 GameObject:
@@ -57893,6 +57949,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ec18a03ed988349ae649eea2c0e33d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _openedPosition: {x: 0, y: 0, z: 1.5}
 --- !u!1 &2031113920
 GameObject:
@@ -59002,6 +59060,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacf6ecb564af644881a54460a0d0f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _text: Suspicious document
 --- !u!212 &2096738647
 SpriteRenderer:
@@ -76465,6 +76525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacf6ecb564af644881a54460a0d0f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 1
   _text: Family Portrait
 --- !u!65 &6742288240999451851
 BoxCollider:
@@ -78447,6 +78509,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cacf6ecb564af644881a54460a0d0f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  outline: {fileID: 0}
+  hasOutline: 0
   _text: Broken phone
 --- !u!114 &7745730126541123863
 MonoBehaviour:
