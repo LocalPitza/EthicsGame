@@ -4098,7 +4098,7 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: Variable["DetectiveStartingIndex"] == -1
-      userScript: TeleportToApartment();
+      userScript: PlayDeathSound();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4109,8 +4109,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 530.62305, y: 189.71252}
-    canvasZoom: 1.1799998
+    canvasScrollPosition: {x: 297.21503, y: 0}
+    canvasZoom: 1.2099998
   - id: 4
     fields:
     - title: Title
@@ -6729,7 +6729,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You brok it after you found out I was talking to my paents behind
+        value: You broke it after you found out I was talking to my paents behind
           your back.
         type: 0
         typeString: 
@@ -7707,7 +7707,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayDeathSound();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7873,7 +7873,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayDeathSound();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8203,8 +8203,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 544.97644, y: 113.92931}
-    canvasZoom: 1.1
+    canvasScrollPosition: {x: 1245.203, y: 936.12823}
+    canvasZoom: 1.7299994
   - id: 5
     fields:
     - title: Title
@@ -10218,8 +10218,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 12.501743}
-    canvasZoom: 1.0899999
+    canvasScrollPosition: {x: 22.400845, y: 13.659618}
+    canvasZoom: 1.4499996
   syncInfo:
     syncActors: 0
     syncItems: 0

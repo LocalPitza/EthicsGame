@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using PixelCrushers.DialogueSystem;
+using TMPro;
 using UnityEngine.UI;
+using Button = UnityEngine.UIElements.Button;
 
 public class Events : MonoBehaviour
 {
@@ -18,11 +20,26 @@ public class Events : MonoBehaviour
     [Header("Look points")]
     [SerializeField] private Transform _lookAtDetective;
     [SerializeField] private Transform _lookAtWife;
+    
+    [Header("MainMenu")]
+    [SerializeField] private GameObject menuHolder;
+    [SerializeField] private GameObject cameraMenu;
+    [SerializeField] private GameObject roomMainMenu;
+
+    [Header("Endings")]
+    [SerializeField] private TextMeshProUGUI ending1;
+    [SerializeField] private TextMeshProUGUI ending2;
+    [SerializeField] private TextMeshProUGUI ending3;
+    [SerializeField] private TextMeshProUGUI creditsText;
+    [SerializeField] private GameObject creditsButton;
+    [SerializeField] private GameObject quitButton;
 
     private void Start()
     {
         FirstPersonController.instance.CanMove = false;
         FirstPersonController.instance.ToggleCrouchStand();
+
+        FirstPersonController.instance.enabled = false;
     }
 
     private void OnEnable()
@@ -40,6 +57,10 @@ public class Events : MonoBehaviour
         Lua.RegisterFunction("FadeToNormal", this, SymbolExtensions.GetMethodInfo(() => FadeToNormal()));
         
         Lua.RegisterFunction("PlayDeathSound", this, SymbolExtensions.GetMethodInfo(() => PlayDeathSound()));
+        
+        Lua.RegisterFunction("ShowEnding1", this, SymbolExtensions.GetMethodInfo(() => ShowEnding1()));
+        Lua.RegisterFunction("ShowEnding2", this, SymbolExtensions.GetMethodInfo(() => ShowEnding2()));
+        Lua.RegisterFunction("ShowEnding3", this, SymbolExtensions.GetMethodInfo(() => ShowEnding3()));
     }
 
     private void OnDisable()
@@ -57,6 +78,10 @@ public class Events : MonoBehaviour
         Lua.UnregisterFunction("FadeToNormal");
         
         Lua.UnregisterFunction("PlayDeathSound");
+        
+        Lua.UnregisterFunction("ShowEnding1");
+        Lua.UnregisterFunction("ShowEnding2");
+        Lua.UnregisterFunction("ShowEnding3");
         
     }
 
@@ -127,7 +152,6 @@ public class Events : MonoBehaviour
     public void InterrogationRoomDoor()
     {
         //DialogueLua.SetVariable("DetectiveStartingIndex", 3);
-        Debug.Log("test");
     }
 
     public void LookAtDetective()
@@ -159,6 +183,75 @@ public class Events : MonoBehaviour
         SoundManager.Instance.PlayOnceMain(SoundManager.Sounds.FallBody);
         
     }
+
+    public void CreditsButton()
+    {
+        ending1.DOFade(0, 1);
+        ending2.DOFade(0, 1);
+        ending3.DOFade(0, 1).onComplete = () =>
+        {
+            creditsText.DOFade(1, 1);
+            creditsButton.SetActive(false);
+            quitButton.SetActive(true);
+        };
+    }
+
+    public void ShowEnding1()
+    {
+        FirstPersonController.instance.enabled = false;
+        
+        ending1.DOFade(1, 1).onComplete = () => { StartCoroutine(ShowCreditsButton());};
+    }
+    
+    public void ShowEnding2()
+    {
+        FirstPersonController.instance.enabled = false;
+        
+        ending2.DOFade(1, 1).onComplete = () => { StartCoroutine(ShowCreditsButton());};;
+    }
+    
+    public void ShowEnding3()
+    {
+        FirstPersonController.instance.enabled = false;
+        
+        ending3.DOFade(1, 1).onComplete = () => { StartCoroutine(ShowCreditsButton());};;
+    }
+
+    IEnumerator ShowCreditsButton()
+    {
+        yield return new WaitForSeconds(5f);
+        creditsButton.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+    
+    
+    //mainmenu
+    
+    
+    public void Play()
+    {
+        FirstPersonController.instance.enabled = true;
+        FirstPersonController.instance.canInteract = false;
+        _blackScreen.DOFade(1, 1).onComplete = () =>
+        {
+            menuHolder.SetActive(false);
+            cameraMenu.SetActive(false);
+            roomMainMenu.SetActive(false);
+            
+
+            _blackScreen.DOFade(0, 1).onComplete = () =>
+            {
+                FirstPersonController.instance.canInteract = true;
+            };
+
+        };
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
     
     //TODO: - Fix sometimes not teleporting to apartment (done)
     //TODO: - Update Outline (done)
@@ -169,7 +262,7 @@ public class Events : MonoBehaviour
     //TODO: - Update 2D sprites of characters (done, also added changer)
     //TODO: - Sound manager (Done)
     //TODO: - Update UI aesthetics
-    //TODO: - Main Menu
+    //TODO: - Main Menu (done)
     //TODO: - Ending, credits
     //TODO: - Add more assets
     

@@ -63,6 +63,8 @@
      <Compile Include="Assets\HighlightPlus\Scripts\HighlightEffectOccluderManager.cs" />
      <Compile Include="Assets\HighlightPlus\Scripts\HighlightEffectActions.cs" />
      <Compile Include="Assets\HighlightPlus\Scripts\HighlightProfile.cs" />
+     <Compile Include="Assets\Scripts\LightFlicker.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Audio\Apartment" />
      <Folder Include="Assets\Prefabs" />
@@ -88,6 +90,7 @@
      <None Include="Assets\HighlightPlus\Resources\HighlightPlus\CustomVertexTransform.cginc" />
      <Folder Include="Assets\Prefabs\Objects_Interior(Village)_Demo" />
      <Folder Include="Assets\Graphics\Models\Bathroom" />
+     <Folder Include="Assets\Graphics\Models\Miscellaneous\foldedClothes" />
      <Folder Include="Assets\Graphics\Models\Lights" />
      <None Include="Assets\HighlightPlus\Resources\HighlightPlus\HighlightClearStencil.shader" />
      <Folder Include="Assets\Graphics\Models\Kitchen" />
@@ -132,6 +135,7 @@
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <Folder Include="Assets\Graphics\Fonts" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <Folder Include="Assets\Graphics\Materials\Stylized Wood Textures\Textures\Planks" />
      <None Include="Assets\HighlightPlus\Resources\HighlightPlus\HighlightAddDepthClip.shader" />
