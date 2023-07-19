@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class FirstPersonController : MonoBehaviour
 {
@@ -100,6 +101,7 @@ public class FirstPersonController : MonoBehaviour
 
     private bool isOnDialogue = false;
 
+
     void Awake()
     {
         instance = this;
@@ -113,7 +115,9 @@ public class FirstPersonController : MonoBehaviour
 
     void Update()
     {
+        
         if (isOnDialogue) return;
+        
             
         if (canMove)
         {
@@ -197,6 +201,16 @@ public class FirstPersonController : MonoBehaviour
         playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
         transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * LookSpeedX, 0);
     }
+
+    public void ForceLookAtObject(Transform objectPosition)
+    {
+        playerCamera.transform.DOLookAt(objectPosition.position, 2).onComplete= () =>
+        {
+            rotationX = playerCamera.transform.localEulerAngles.x;
+        };
+    }
+    
+    
 
     private void CursorHandler()
     {

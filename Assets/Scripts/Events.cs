@@ -14,6 +14,10 @@ public class Events : MonoBehaviour
     [SerializeField] private Transform _interrogationRoomSpawnPoint;
     [SerializeField] private GameObject[] _objectsToSpawnAfterTalkingToDetective;
 
+    [Header("Look points")]
+    [SerializeField] private Transform _lookAtDetective;
+    [SerializeField] private Transform _lookAtWife;
+
     private void Start()
     {
         FirstPersonController.instance.CanMove = false;
@@ -28,8 +32,13 @@ public class Events : MonoBehaviour
         Lua.RegisterFunction("StandAndLeave", this, SymbolExtensions.GetMethodInfo(() => StandAndLeave()));
         Lua.RegisterFunction("InterrogationRoomDoor", this, SymbolExtensions.GetMethodInfo(() => InterrogationRoomDoor()));
         
+        Lua.RegisterFunction("LookAtDetective", this, SymbolExtensions.GetMethodInfo(() => LookAtDetective()));
+        Lua.RegisterFunction("LookAtWife", this, SymbolExtensions.GetMethodInfo(() => LookAtWife()));
+        
         Lua.RegisterFunction("FadeToBlack", this, SymbolExtensions.GetMethodInfo(() => FadeToBlack()));
         Lua.RegisterFunction("FadeToNormal", this, SymbolExtensions.GetMethodInfo(() => FadeToNormal()));
+        
+        
     }
 
     private void OnDisable()
@@ -40,6 +49,9 @@ public class Events : MonoBehaviour
         Lua.UnregisterFunction("StandAndLeave");
         Lua.UnregisterFunction("InterrogationRoomDoor");
         
+        Lua.UnregisterFunction("LookAtDetective");
+        Lua.UnregisterFunction("LookAtWife");
+
         Lua.UnregisterFunction("FadeToBlack");
         Lua.UnregisterFunction("FadeToNormal");
         
@@ -112,18 +124,31 @@ public class Events : MonoBehaviour
         //DialogueLua.SetVariable("DetectiveStartingIndex", 3);
         Debug.Log("test");
     }
+
+    public void LookAtDetective()
+    {
+        FirstPersonController.instance.ForceLookAtObject(_lookAtDetective);
+    }
     
-    //TODO: - Fix sometimes not teleporting to apartment
-    //TODO: - Fix sometimes outline of object not disappearing (done)
+    public void LookAtWife()
+    {
+        FirstPersonController.instance.ForceLookAtObject(_lookAtWife);
+    }
+    
+    //TODO: - Fix sometimes not teleporting to apartment (done)
+    //TODO: - Update Outline
     //TODO: - Fix door colliding when toggled (done)
     //TODO: - Add bool values to objects (finished on existing objects)
-    //TODO: - Wife Dialogue (not finished)
+    //TODO: - Wife Dialogue (done)
     //TODO: - Place interactable objects (story wise)
-    //TODO: - Update 2D sprites of characters (done, just fix animation)
+    //TODO: - Update 2D sprites of characters (done, also added changer)
     //TODO: - Sound manager
     //TODO: - Update UI aesthetics
     //TODO: - Main Menu
-    //TODO: - Ending
+    //TODO: - Ending, credits
+    //TODO: - Add more assets
+    
+    
 
 
 }

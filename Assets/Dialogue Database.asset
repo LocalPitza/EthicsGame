@@ -1348,14 +1348,14 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: LookAtDetective();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 621.9612
-        y: 57.02912
+        y: 27.524918
         width: 160
         height: 30
     - id: 1
@@ -4054,8 +4054,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 181.55212, y: 0}
-    canvasZoom: 1.3599997
+    canvasScrollPosition: {x: 164.6547, y: 0}
+    canvasZoom: 0.94000006
   - id: 4
     fields:
     - title: Title
@@ -4153,7 +4153,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: LookAtWife();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8148,8 +8148,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 288.24097, y: 56.53018}
-    canvasZoom: 0.95000017
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 0.8300003
   - id: 5
     fields:
     - title: Title
@@ -9351,7 +9351,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: LookAtDetective();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
