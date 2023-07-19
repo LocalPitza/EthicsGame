@@ -261,10 +261,10 @@ public class Events : MonoBehaviour
     //TODO: - Place interactable objects (story wise)
     //TODO: - Update 2D sprites of characters (done, also added changer)
     //TODO: - Sound manager (Done)
-    //TODO: - Update UI aesthetics
+    //TODO: - Update UI aesthetics (Done)
     //TODO: - Main Menu (done)
-    //TODO: - Ending, credits
-    //TODO: - Add more assets
+    //TODO: - Ending, credits (Done)
+    //TODO: - Add more assets (Somewhat Done)
     
     
 
