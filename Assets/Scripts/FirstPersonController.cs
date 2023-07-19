@@ -206,10 +206,20 @@ public class FirstPersonController : MonoBehaviour
     {
         playerCamera.transform.DOLookAt(objectPosition.position, 2).onComplete= () =>
         {
-            rotationX = playerCamera.transform.localEulerAngles.x;
+            float convertedRotation = ConvertToValidRotation(playerCamera.transform.localEulerAngles.x);
+            rotationX = convertedRotation;
         };
     }
     
+    float ConvertToValidRotation(float value)
+    {
+        if (value > 180)
+        {
+            value -= 360; // Convert values above 180 to negative range
+        }
+
+        return value;
+    }
     
 
     private void CursorHandler()
