@@ -299,7 +299,8 @@ public class FirstPersonController : MonoBehaviour
 
         if(footstepTimer <= 0)
         {
-            if(Physics.Raycast(playerCamera.transform.position, Vector3.down, out RaycastHit hit, 3))
+            //added layer mask kasi nag cocollide with player itself
+            if(Physics.Raycast(playerCamera.transform.position, Vector3.down, out RaycastHit hit, 30, LayerMask.GetMask("Floor")))
             {
                 switch (hit.collider.tag)
                 {

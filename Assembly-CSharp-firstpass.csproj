@@ -148,9 +148,9 @@
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\UI\Legacy\GUI Controls\GUITextField.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\UI\Legacy\GUI Controls\ScaledRect\ScaledRectAlignment.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Common\Scripts\Save System\Spawning\SpawnedObject.cs" />
+     <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\MVC\Actor\BarkGroupManager.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Syntax\Assignment.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Chunk\DoStmt.cs" />
-     <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\MVC\Actor\BarkGroupManager.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\MVC\Model\Logic\DB\DatabaseResetOptions.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Scripts\Lua\Lua Interpreter\Parser\Syntax\BreakStmt.cs" />
      <Compile Include="Assets\Plugins\Pixel Crushers\Dialogue System\Wrappers\UI\Standard\Selector\SelectorUseStandardUIElements.cs" />

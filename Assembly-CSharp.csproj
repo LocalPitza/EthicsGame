@@ -48,10 +48,11 @@
      <Compile Include="Assets\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\Scripts\InteractDoor.cs" />
      <Compile Include="Assets\Scripts\UIInteract.cs" />
+     <Compile Include="Assets\Scripts\ChangeSprite.cs" />
      <Compile Include="Assets\Scripts\Interactable.cs" />
      <Compile Include="Assets\Scripts\InteractTest.cs" />
      <Compile Include="Assets\Scripts\Events.cs" />
-     <Compile Include="Assets\Scripts\ChangeSprite.cs" />
+     <Compile Include="Assets\Scripts\SoundManager.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Prefabs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -94,6 +95,7 @@
      <Folder Include="Assets\Graphics\Test" />
      <Folder Include="Assets\Graphics\Materials\Stylized Wood Textures\Materials\Panels" />
      <Folder Include="Assets\Graphics\Materials\Stylized Wood Textures\Materials\Square" />
+     <Folder Include="Assets\Audio\Door" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <Folder Include="Assets\Graphics\Materials\Stylized Wood Textures\Textures\Triangle" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
