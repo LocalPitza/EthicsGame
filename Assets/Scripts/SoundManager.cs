@@ -198,6 +198,9 @@ public class SoundManager : MonoBehaviour
     public enum Sounds  //add sound type here, add at the bottom of the list
     {
         DoorOpen,
-        DoorClose
+        DoorClose,
+        CarsOutside,
+        InterrogationAmbience,
+        CeilingFan
     }
 }
