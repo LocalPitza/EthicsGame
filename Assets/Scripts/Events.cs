@@ -13,6 +13,7 @@ public class Events : MonoBehaviour
     [SerializeField] private Transform _apartmentSpawnPoint;
     [SerializeField] private Transform _interrogationRoomSpawnPoint;
     [SerializeField] private GameObject[] _objectsToSpawnAfterTalkingToDetective;
+    [SerializeField] private AudioSource _jazzSound;
 
     [Header("Look points")]
     [SerializeField] private Transform _lookAtDetective;
@@ -38,7 +39,7 @@ public class Events : MonoBehaviour
         Lua.RegisterFunction("FadeToBlack", this, SymbolExtensions.GetMethodInfo(() => FadeToBlack()));
         Lua.RegisterFunction("FadeToNormal", this, SymbolExtensions.GetMethodInfo(() => FadeToNormal()));
         
-        
+        Lua.RegisterFunction("PlayDeathSound", this, SymbolExtensions.GetMethodInfo(() => PlayDeathSound()));
     }
 
     private void OnDisable()
@@ -54,6 +55,8 @@ public class Events : MonoBehaviour
 
         Lua.UnregisterFunction("FadeToBlack");
         Lua.UnregisterFunction("FadeToNormal");
+        
+        Lua.UnregisterFunction("PlayDeathSound");
         
     }
 
@@ -72,6 +75,7 @@ public class Events : MonoBehaviour
             
             GetComponent<CharacterController>().enabled = true;
 
+            _jazzSound.DOFade(1, 0.5f);
             _blackScreen.DOFade(0f, 5f).SetEase(Ease.InQuad);
         };
 
@@ -81,6 +85,7 @@ public class Events : MonoBehaviour
     {
         GetComponent<CharacterController>().enabled = false;
 
+        _jazzSound.Stop();
         transform.position = _interrogationRoomSpawnPoint.position;
         transform.rotation = _interrogationRoomSpawnPoint.rotation;
         
@@ -134,15 +139,35 @@ public class Events : MonoBehaviour
     {
         FirstPersonController.instance.ForceLookAtObject(_lookAtWife);
     }
+
+    public void PlayDeathSound()
+    {
+        StartCoroutine(DeathAudioSequence());
+    }
+
+    IEnumerator DeathAudioSequence()
+    {
+        yield return new WaitForSeconds(0.25f);
+        SoundManager.Instance.PlayOnceMain(SoundManager.Sounds.PushBody);
+        yield return new WaitForSeconds(0.25f);
+        SoundManager.Instance.PlayOnceMain(SoundManager.Sounds.WomanGasp);
+        yield return new WaitForSeconds(1f);
+        SoundManager.Instance.PlayOnceMain(SoundManager.Sounds.MirrorBreak);
+        yield return new WaitForSeconds(0.25f);
+        SoundManager.Instance.PlayOnceMain(SoundManager.Sounds.HitHead);
+        yield return new WaitForSeconds(0.75f);
+        SoundManager.Instance.PlayOnceMain(SoundManager.Sounds.FallBody);
+        
+    }
     
     //TODO: - Fix sometimes not teleporting to apartment (done)
-    //TODO: - Update Outline
+    //TODO: - Update Outline (done)
     //TODO: - Fix door colliding when toggled (done)
     //TODO: - Add bool values to objects (finished on existing objects)
     //TODO: - Wife Dialogue (done)
     //TODO: - Place interactable objects (story wise)
     //TODO: - Update 2D sprites of characters (done, also added changer)
-    //TODO: - Sound manager
+    //TODO: - Sound manager (Done)
     //TODO: - Update UI aesthetics
     //TODO: - Main Menu
     //TODO: - Ending, credits

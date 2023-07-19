@@ -1335,6 +1335,24 @@ MonoBehaviour:
         destinationDialogueID: 49
         isConnector: 0
         priority: 2
+      - originConversationID: 3
+        originDialogueID: 0
+        destinationConversationID: 3
+        destinationDialogueID: 1
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 0
+        destinationConversationID: 3
+        destinationDialogueID: 10
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 0
+        destinationConversationID: 3
+        destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
       conditionsString: 
       userScript: LookAtDetective();
       onExecute:
@@ -2500,7 +2518,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: It's her phone.
+        value: '[ITEM: Broken Phone]'
         type: 0
         typeString: 
       - title: Sequence
@@ -4079,20 +4097,20 @@ MonoBehaviour:
       falseConditionAction: Block
       conditionPriority: 2
       outgoingLinks: []
-      conditionsString: 
-      userScript: TeleportToApartment();
+      conditionsString: Variable["DetectiveStartingIndex"] == -1
+      userScript: PlayDeathSound();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
-        x: 621.9612
-        y: 77.52492
+        x: 1081.3018
+        y: 28.074371
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 175.26685, y: 0}
-    canvasZoom: 0.9100001
+    canvasScrollPosition: {x: 297.21503, y: 0}
+    canvasZoom: 1.2099998
   - id: 4
     fields:
     - title: Title
@@ -5570,7 +5588,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: I there anything else you want to say?
+        value: Is there anything else you want to say?
         type: 0
         typeString: 
       - title: Sequence
@@ -6711,7 +6729,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You brok it after you found out I was talking to my paents behind
+        value: You broke it after you found out I was talking to my paents behind
           your back.
         type: 0
         typeString: 
@@ -7689,7 +7707,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayDeathSound();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7855,7 +7873,7 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: PlayDeathSound();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8185,8 +8203,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 0}
-    canvasZoom: 0.8300003
+    canvasScrollPosition: {x: 1245.203, y: 936.12823}
+    canvasZoom: 1.7299994
   - id: 5
     fields:
     - title: Title
@@ -9730,7 +9748,7 @@ MonoBehaviour:
         destinationDialogueID: 8
         isConnector: 0
         priority: 2
-      conditionsString: 
+      conditionsString: Variable["hasFoundDNATest"] == true
       userScript: 
       onExecute:
         m_PersistentCalls:
@@ -10200,8 +10218,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 0, y: 12.501743}
-    canvasZoom: 1.0899999
+    canvasScrollPosition: {x: 22.400845, y: 13.659618}
+    canvasZoom: 1.4499996
   syncInfo:
     syncActors: 0
     syncItems: 0

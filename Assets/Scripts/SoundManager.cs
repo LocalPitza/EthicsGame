@@ -201,6 +201,12 @@ public class SoundManager : MonoBehaviour
         DoorClose,
         CarsOutside,
         InterrogationAmbience,
-        CeilingFan
+        CeilingFan,
+        MirrorBreak,
+        HitHead,
+        PushBody,
+        FallBody,
+        WomanGasp,
+        Jazz
     }
 }

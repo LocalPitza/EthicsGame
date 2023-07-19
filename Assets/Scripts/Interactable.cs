@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using HighlightPlus;
+using PixelCrushers.DialogueSystem;
 using UnityEngine;
 using QualityLevel = HighlightPlus.QualityLevel;
 
 public abstract class Interactable : MonoBehaviour
 {
     [HideInInspector] public HighlightEffect outline;
+    [HideInInspector] public AudioSource audioSource;
+    [HideInInspector] public DialogueSystemTrigger dialogueSystemTrigger;
 
     public bool hasOutline;
+    
     public virtual void Awake()
     {
         gameObject.layer = 6;
