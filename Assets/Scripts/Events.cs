@@ -40,6 +40,7 @@ public class Events : MonoBehaviour
         FirstPersonController.instance.ToggleCrouchStand();
 
         FirstPersonController.instance.enabled = false;
+        SoundManager.Instance.PlayLoopMain(SoundManager.Sounds.InterrogationBGM2,0.5f);
     }
 
     private void OnEnable()
@@ -99,6 +100,7 @@ public class Events : MonoBehaviour
             FirstPersonController.instance.CanMove = true;
             
             GetComponent<CharacterController>().enabled = true;
+            SoundManager.Instance.StopPlayingBGMMain(SoundManager.Sounds.InterrogationBGM1);
 
             _jazzSound.DOFade(1, 0.5f);
             _blackScreen.DOFade(0f, 5f).SetEase(Ease.InQuad);
@@ -119,6 +121,8 @@ public class Events : MonoBehaviour
         FirstPersonController.instance.ResetMoveDir();
         FirstPersonController.instance.CanMove = false;
         FirstPersonController.instance.ToggleCrouchStand();
+        
+        SoundManager.Instance.PlayLoopMain(SoundManager.Sounds.InterrogationBGM2, 0.15f);
         
         _blackScreen.DOFade(0f, 5f);
     }
@@ -197,6 +201,8 @@ public class Events : MonoBehaviour
         };
     }
 
+    
+
     public void ShowEnding1()
     {
         FirstPersonController.instance.enabled = false;
@@ -240,6 +246,8 @@ public class Events : MonoBehaviour
             cameraMenu.SetActive(false);
             roomMainMenu.SetActive(false);
             
+            SoundManager.Instance.StopPlayingBGMMain(SoundManager.Sounds.InterrogationBGM2);
+            SoundManager.Instance.PlayLoopMain(SoundManager.Sounds.InterrogationBGM1, 0.15f);
 
             _blackScreen.DOFade(0, 1).onComplete = () =>
             {

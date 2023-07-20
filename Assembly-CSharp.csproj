@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Compile Include="Assets\HighlightPlus\Scripts\HighlightSeeThroughOccluder.cs" />
      <Compile Include="Assets\Scripts\Events.cs" />
+     <Compile Include="Assets\Scripts\UISound.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Audio\Apartment" />
      <Folder Include="Assets\Prefabs" />
@@ -155,6 +156,7 @@
      <Folder Include="Assets\TextMesh Pro\Shaders" />
      <None Include="Assets\HighlightPlus\Resources\HighlightPlus\HighlightComposeOutline.shader" />
      <Folder Include="Assets\HighlightPlus\Resources" />
+     <Folder Include="Assets\Audio\Clicks" />
      <Folder Include="Assets\TextMesh Pro\Resources\Style Sheets" />
      <Folder Include="Assets\TextMesh Pro\Fonts" />
      <Folder Include="Assets\Graphics\Models\Beds" />

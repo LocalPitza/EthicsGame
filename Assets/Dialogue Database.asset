@@ -7533,7 +7533,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You broke it after you found out I was talking to my paents behind
+        value: You broke it after you found out I was talking to my parents behind
           your back.
         type: 0
         typeString: 
@@ -9013,8 +9013,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 549.077, y: 136.31091}
-    canvasZoom: 0.9500001
+    canvasScrollPosition: {x: 527.75244, y: 251.07996}
+    canvasZoom: 1.2499999
   - id: 5
     fields:
     - title: Title

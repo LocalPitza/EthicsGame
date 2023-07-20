@@ -36,12 +36,13 @@ public class SoundManager : MonoBehaviour
     public SoundType[] sounds;
     private Coroutine routine;
     
-    public void PlayLoopMain(Sounds sound)
+    public void PlayLoopMain(Sounds sound, float vol = 1)
     {
         AudioClip clip = getSoundClip(sound);
 
         if (clip != null)
         {
+            SoundBGMusic.volume = vol;
             SoundBGMusic.clip = clip;
             SoundBGMusic.Play();
         }
@@ -65,11 +66,12 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void PlayOnceMain(Sounds sound)
+    public void PlayOnceMain(Sounds sound, float vol = 1)
     {
         AudioClip clip = getSoundClip(sound);
         if (clip != null)
         {
+            SoundSfx.volume = vol;
             SoundSfx.PlayOneShot(clip);
         }
         else
@@ -207,6 +209,10 @@ public class SoundManager : MonoBehaviour
         PushBody,
         FallBody,
         WomanGasp,
-        Jazz
+        Jazz,
+        UIHover,
+        UIClick,
+        InterrogationBGM1,
+        InterrogationBGM2
     }
 }
