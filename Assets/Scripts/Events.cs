@@ -16,7 +16,7 @@ public class Events : MonoBehaviour
     [SerializeField] private Transform _interrogationRoomSpawnPoint;
     [SerializeField] private GameObject[] _objectsToSpawnAfterTalkingToDetective;
     [SerializeField] private AudioSource _jazzSound;
-
+    
     [Header("Look points")]
     [SerializeField] private Transform _lookAtDetective;
     [SerializeField] private Transform _lookAtWife;
@@ -125,7 +125,7 @@ public class Events : MonoBehaviour
 
     public void FadeToBlack()
     {
-        _blackScreen.DOFade(1f, 1f);
+       _blackScreen.DOFade(1f, 1f);
     }
     
     public void FadeToNormal()
@@ -171,6 +171,7 @@ public class Events : MonoBehaviour
 
     IEnumerator DeathAudioSequence()
     {
+        _jazzSound.DOPitch(0.2f, 10f);
         yield return new WaitForSeconds(0.25f);
         SoundManager.Instance.PlayOnceMain(SoundManager.Sounds.PushBody);
         yield return new WaitForSeconds(0.25f);

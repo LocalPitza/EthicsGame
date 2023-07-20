@@ -1338,12 +1338,6 @@ MonoBehaviour:
       - originConversationID: 3
         originDialogueID: 0
         destinationConversationID: 3
-        destinationDialogueID: 1
-        isConnector: 0
-        priority: 2
-      - originConversationID: 3
-        originDialogueID: 0
-        destinationConversationID: 3
         destinationDialogueID: 10
         isConnector: 0
         priority: 2
@@ -1351,6 +1345,12 @@ MonoBehaviour:
         originDialogueID: 0
         destinationConversationID: 3
         destinationDialogueID: 11
+        isConnector: 0
+        priority: 2
+      - originConversationID: 3
+        originDialogueID: 0
+        destinationConversationID: 3
+        destinationDialogueID: 1
         isConnector: 0
         priority: 2
       conditionsString: 
@@ -3250,9 +3250,9 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "Yes we sometimes fight, but this time, it's different. We were arguing
-          because I didn't want her parents \rto meet Lucas, I don't want them near
-          our son."
+        value: Yes we sometimes fight, but this time, it's different. We were arguing
+          because I didn't want her parents to meet Lucas, I don't want them near
+          our son.
         type: 0
         typeString: 
       - title: Sequence
@@ -4109,8 +4109,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 297.21503, y: 0}
-    canvasZoom: 1.2099998
+    canvasScrollPosition: {x: 676.6183, y: 0}
+    canvasZoom: 0.9999999
   - id: 4
     fields:
     - title: Title
@@ -4406,7 +4406,12 @@ MonoBehaviour:
         priority: 2
       conditionsString: Variable["hasFoundBrokenPhone"] == true and (Variable["isLoopWife"]
         == false)
-      userScript: Variable["isLoopWife"] = true
+      userScript: 'Variable["isLoopWife"] = true
+
+        Variable["WifeSpriteIndex"]
+        = 1;
+
+        ChangeWifeSprite();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4462,7 +4467,12 @@ MonoBehaviour:
         priority: 2
       conditionsString: Variable["hasFoundFamilyPortrait"] == true and (Variable["isLoopWife"]
         == false)
-      userScript: Variable["isLoopWife"] = true
+      userScript: 'Variable["isLoopWife"] = true
+
+        Variable["WifeSpriteIndex"]
+        = 1;
+
+        ChangeWifeSprite();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4518,7 +4528,12 @@ MonoBehaviour:
         priority: 2
       conditionsString: Variable["hasFoundDNATest"] == true and (Variable["isLoopWife"]
         == false)
-      userScript: Variable["isLoopWife"] = true
+      userScript: 'Variable["isLoopWife"] = true
+
+        Variable["WifeSpriteIndex"]
+        = 1;
+
+        ChangeWifeSprite();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -4867,7 +4882,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'Variable["WifeSpriteIndex"] = 1;
+
+        ChangeWifeSprite();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -5494,7 +5511,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'Variable["WifeSpriteIndex"] = 2;
+
+        ChangeWifeSprite();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6586,7 +6605,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'Variable["WifeSpriteIndex"] = 2;
+
+        ChangeWifeSprite();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -6863,7 +6884,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'Variable["WifeSpriteIndex"] = 1;
+
+        ChangeWifeSprite();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7432,7 +7455,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'Variable["WifeSpriteIndex"] = 1;
+
+        ChangeWifeSprite();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -7542,7 +7567,9 @@ MonoBehaviour:
         isConnector: 0
         priority: 2
       conditionsString: 
-      userScript: 
+      userScript: 'Variable["WifeSpriteIndex"] =2;
+
+        ChangeWifeSprite();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -8203,8 +8230,8 @@ MonoBehaviour:
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 1245.203, y: 936.12823}
-    canvasZoom: 1.7299994
+    canvasScrollPosition: {x: 549.077, y: 136.31091}
+    canvasZoom: 0.9500001
   - id: 5
     fields:
     - title: Title
@@ -9520,15 +9547,11 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 9
-        originDialogueID: 3
-        destinationConversationID: 9
-        destinationDialogueID: 4
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
-      userScript: FadeToBlack();
+      userScript: 'FadeToBlack();
+
+        ShowEnding1();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9536,61 +9559,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 27
         y: 234
-        width: 160
-        height: 30
-    - id: 4
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 3
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "[ I can't bring myself to admit this grave sin. My promise to Sarah
-          is that I will look after our son If I go to jail. \rWhat will happen to
-          Lucas? His grandparents would take him from me, and I wouldn't ever see
-          him again. Maybe never. \rHe needs me. I can still see that night over
-          and over in my nightmares. The face of Sarah pains me. \rEven after I'm
-          awake, I keep turning around as if she's standing behind me. I feel like
-          she's telling me, \r\"Why?\" I have to ask myself if I made the right choice.]"
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 9
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 27
-        y: 284
         width: 160
         height: 30
     - id: 5
@@ -9630,15 +9598,11 @@ MonoBehaviour:
       delaySimStatus: 0
       falseConditionAction: Block
       conditionPriority: 2
-      outgoingLinks:
-      - originConversationID: 9
-        originDialogueID: 5
-        destinationConversationID: 9
-        destinationDialogueID: 6
-        isConnector: 0
-        priority: 2
+      outgoingLinks: []
       conditionsString: 
-      userScript: FadeToBlack();
+      userScript: 'FadeToBlack();
+
+        ShowEnding2();'
       onExecute:
         m_PersistentCalls:
           m_Calls: []
@@ -9646,62 +9610,6 @@ MonoBehaviour:
         serializedVersion: 2
         x: 240
         y: 237
-        width: 160
-        height: 30
-    - id: 6
-      fields:
-      - title: Title
-        value: 
-        type: 0
-        typeString: 
-      - title: Description
-        value: 
-        type: 0
-        typeString: 
-      - title: Actor
-        value: 1
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Conversant
-        value: 3
-        type: 5
-        typeString: CustomFieldType_Actor
-      - title: Menu Text
-        value: 
-        type: 0
-        typeString: 
-      - title: Dialogue Text
-        value: "[ I received a one-year prison term for unintentional manslaughter
-          from the court. As a result of Sarah's parents taking custody of Lucas
-          while I am in jail, my relationship with them has deteriorated significantly,
-          and I don't blame them. I took their daughter from them. I'm sorry, Sarah.
-          I didn't fulfill my promise to look after our son, but I couldn't bear
-          the guilt of killing you and living unpunished. If I could go back in time
-          and change things, I would have given you the life you desired\u2014a family
-          life with your parents. So you will still be there, standing by me. ]"
-        type: 0
-        typeString: 
-      - title: Sequence
-        value: 
-        type: 0
-        typeString: 
-      conversationID: 9
-      isRoot: 0
-      isGroup: 0
-      nodeColor: 
-      delaySimStatus: 0
-      falseConditionAction: Block
-      conditionPriority: 2
-      outgoingLinks: []
-      conditionsString: 
-      userScript: 
-      onExecute:
-        m_PersistentCalls:
-          m_Calls: []
-      canvasRect:
-        serializedVersion: 2
-        x: 239
-        y: 287
         width: 160
         height: 30
     - id: 7
@@ -10180,18 +10088,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: "I received a one-year prison term for unintentional manslaughter
-          from the court. As a result of Sarah's parents taking custody of Lucas
-          while I am in jail, my relationship with them has deteriorated significantly,
-          and I don't blame them. I took their daughter from them. I'm sorry, Sarah.
-          I wish you had told me the truth. I would still love Lucas no matter who
-          his father was. He's still my son. I didn't fulfill my promise to look
-          after our son, but I couldn't bear the guilt of killing you and living
-          unpunished. If I could go back in time and change things, I would have
-          given you the life you desired\u2014a family life with your parents. I'm
-          giving them a second chance. So you will still be there, with Lucas, your
-          parents, and me.\r\n\r\nI'll give our son the life he deserves as my promise
-          and life punishment to you, Sarah."
+        value: '[End]'
         type: 0
         typeString: 
       - title: Sequence
@@ -10207,19 +10104,19 @@ MonoBehaviour:
       conditionPriority: 2
       outgoingLinks: []
       conditionsString: 
-      userScript: 
+      userScript: ShowEnding3();
       onExecute:
         m_PersistentCalls:
           m_Calls: []
       canvasRect:
         serializedVersion: 2
         x: 451
-        y: 638
+        y: 639
         width: 160
         height: 30
     entryGroups: []
-    canvasScrollPosition: {x: 22.400845, y: 13.659618}
-    canvasZoom: 1.4499996
+    canvasScrollPosition: {x: 0, y: 116.66142}
+    canvasZoom: 1.3899996
   syncInfo:
     syncActors: 0
     syncItems: 0
